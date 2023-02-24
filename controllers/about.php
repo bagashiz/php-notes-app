@@ -1,5 +1,4 @@
 <?php
-require "helpers.php";
 
 $heading = "About Us";
 
