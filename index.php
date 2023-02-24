@@ -5,8 +5,11 @@ require "helpers.php";
 require "Database.php";
 
 $config = require("config.php");
-
 $db = new Database($config['database']);
-$result = $db->query("SELECT * FROM users")->fetch(PDO::FETCH_ASSOC);
+
+$id = $_GET['id'];
+$query = "SELECT * FROM users WHERE id = ?";
+
+$result = $db->query($query, [$id])->fetch();
 
 dd($result);
