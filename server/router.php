@@ -1,14 +1,6 @@
 <?php
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-
-$routes = [
-    '/' => 'controllers/index.php',
-    '/notes' => 'controllers/notes.php',
-    '/note' => 'controllers/note.php',
-    '/about' => 'controllers/about.php',
-    '/contact' => 'controllers/contact.php',
-];
+$routes = require "server/routes.php";
 
 // routeToController sets the controller to be loaded based on the URI
 function routeToController($uri, $routes)
@@ -30,4 +22,5 @@ function abort($code = 404)
     die();
 }
 
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 routeToController($uri, $routes);
