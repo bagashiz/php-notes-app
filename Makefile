@@ -8,7 +8,7 @@ dropdb:
 	podman exec -ti mysql-server mysql -u root -ppassword -e "DROP DATABASE myapp"
 
 copy_script:
-	podman cp ./notes-mini-project.sql mysql-server:/notes-mini-project.sql
+	podman cp ./db/notes-mini-project.sql mysql-server:/notes-mini-project.sql
 
 migrate:
 	podman exec -ti mysql-server mysql -uroot -ppassword -e "source ./notes-mini-project.sql" myapp

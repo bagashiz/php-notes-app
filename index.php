@@ -1,5 +1,6 @@
 <?php
 
-require "helpers.php";
-require "Database.php";
+require "helpers/helpers.php";
+require "helpers/Response.php";
+require "db/Database.php";
 require "router.php";
