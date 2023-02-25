@@ -4,13 +4,21 @@
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <?php foreach ($notes as $note) : ?>
-            <li>
-                <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline">
-                    <?= $note['body'] ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
+        <ul>
+            <?php foreach ($notes as $note) : ?>
+                <li>
+                    <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline">
+                        <?= $note['body'] ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        
+        <br><hr><br>
+
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="/notes/create" class="text-white">New Note</a>
+        </button>
     </div>
 </main>
 
