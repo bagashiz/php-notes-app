@@ -6,3 +6,14 @@ createdb:
 
 dropdb:
 	podman exec -ti mysql-server mysql -u root -ppassword -e "DROP DATABASE myapp"
+
+copy_script:
+	podman cp ./notes-mini-project.sql mysql-server:/notes-mini-project.sql
+
+migrate:
+	podman exec -ti mysql-server mysql -uroot -ppassword -e "source ./notes-mini-project.sql" myapp
+
+dev:
+	php -S localhost:8000
+
+.PHONY: mysql createdb dropdb copy_script migrate dev
