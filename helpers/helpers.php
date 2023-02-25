@@ -13,3 +13,12 @@ function urlIs($url)
 {
     return $_SERVER['REQUEST_URI'] === $url;
 }
+
+// authorize checks if the passed condition value is true,
+// if it is not, it aborts the script with a given status code
+function authorize($condition, $status = Response::FORBIDDEN)
+{
+    if (!$condition) {
+        abort($status);
+    }
+}
