@@ -14,6 +14,7 @@
         </button>
 
         <form method="POST" style="display: inline-block;">
+        <input type="hidden" name="_method" value="DELETE">
             <input type="hidden" value="<?= $note['id'] ?>" name="id">
             <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                 Delete Note
