@@ -14,6 +14,6 @@ migrate:
 	podman exec -ti mysql-server mysql -uroot -ppassword -e "source ./notes-mini-project.sql" myapp
 
 dev:
-	php -S localhost:8000
+	php -S localhost:8000 -t public
 
 .PHONY: mysql createdb dropdb copy_script migrate dev

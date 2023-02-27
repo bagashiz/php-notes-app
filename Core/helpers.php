@@ -22,3 +22,17 @@ function authorize($condition, $status = Response::FORBIDDEN)
         abort($status);
     }
 }
+
+// base_path returns the absolute path of the given path
+function base_path($path)
+{
+    return BASE_PATH . $path;
+}
+
+// view renders the view file with the given attributes
+function view($path, $attributes = [])
+{
+    extract($attributes);
+
+    require base_path("views/" . $path);
+}

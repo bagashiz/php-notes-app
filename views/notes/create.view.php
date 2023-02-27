@@ -1,6 +1,6 @@
-<?php require 'views/partials/head.php' ?>
-<?php require 'views/partials/nav.php' ?>
-<?php require 'views/partials/header.php' ?>
+<?php require base_path('views/partials/head.php') ?>
+<?php require base_path('views/partials/nav.php') ?>
+<?php require base_path('views/partials/header.php') ?>
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
@@ -17,7 +17,7 @@
                                             <?= $_POST['body'] ?? '' ?>
                                         </textarea>
 
-                                        <?php if (isset($errors['body'])): ?>
+                                        <?php if (isset($errors['body'])) : ?>
                                             <p class="mt-2 text-xs text-red-500" id="body-error"><?= $errors['body'] ?></p>
                                         <?php endif; ?>
                                     </div>
@@ -34,4 +34,4 @@
     </div>
 </main>
 
-<?php require 'views/partials/footer.php' ?>
+<?php require base_path('views/partials/footer.php') ?>

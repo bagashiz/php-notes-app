@@ -33,7 +33,7 @@ This is my simple PHP mini project. It is a simple note web application.
 3. Start the PHP server.
 
     ```bash
-    php -S localhost:8000
+    php -S localhost:8000 -t public
     ```
 
 4. Go to `http://localhost:8000` in your browser.
