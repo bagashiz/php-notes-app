@@ -1,5 +1,7 @@
 <?php
 
+use Core\Response;
+
 // dd dumps the passed value and ends the script
 function dd($value)
 {

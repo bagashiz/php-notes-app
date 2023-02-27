@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 // Validator class to handle controller validation
 class Validator
 {

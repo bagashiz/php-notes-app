@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 // Response class to handle HTTP responses
 class Response
 {
