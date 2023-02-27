@@ -10,6 +10,16 @@ function dd($value)
     echo '</pre>';
 }
 
+// abort aborts the script with a given status code
+function abort($code = Response::NOT_FOUND)
+{
+    http_response_code($code);
+
+    require base_path("views/{$code}.view.php");
+
+    die();
+}
+
 // urlIs checks if the current url is the same as the one passed in
 function urlIs($url)
 {
