@@ -12,6 +12,13 @@
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             <a href="/notes">Back To Notes</a>
         </button>
+
+        <form method="POST" style="display: inline-block;">
+            <input type="hidden" value="<?= $note['id'] ?>" name="id">
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                Delete Note
+            </button>
+        </form>
     </div>
 </main>
 
