@@ -4,22 +4,21 @@
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <p> <?= htmlspecialchars($note['body']) ?></p>
-
-        <br>
-        <hr><br>
-
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">
             <a href="/notes">Back To Notes</a>
         </button>
 
-        <form method="POST" style="display: inline-block;">
-        <input type="hidden" name="_method" value="DELETE">
-            <input type="hidden" value="<?= $note['id'] ?>" name="id">
-            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                Delete Note
+        <p class="mt-6"> <?= htmlspecialchars($note['body']) ?></p>
+
+        <hr class="mt-6">
+
+        <footer class="mt-6">
+        <!-- edit button in grey -->
+            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded">
+                <a href="/note/edit?id=<?= $note['id'] ?>">Edit Note</a>
             </button>
-        </form>
+        </footer>
+
     </div>
 </main>
 
