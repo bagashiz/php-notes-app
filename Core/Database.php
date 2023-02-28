@@ -10,6 +10,7 @@ class Database
     public $connection;
     public $statement;
 
+    // constructor for creating a new database connection
     public function __construct($config, $user = 'root', $password = 'password')
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
@@ -17,6 +18,8 @@ class Database
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ]);
     }
+    
+    // query executes a query on the database
     public function query($query, $params = [])
     {
         $this->statement = $this->connection->prepare($query);

@@ -5,6 +5,7 @@ namespace Core;
 // Validator class to handle controller validation
 class Validator
 {
+    // validate validates the request
     public static function string($value, $min = 1, $max = INF)
     {
         $value = trim($value);

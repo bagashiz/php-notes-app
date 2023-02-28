@@ -5,7 +5,6 @@ namespace Core;
 // Router is a class that handles routing
 class Router
 {
-    // routes holds all the routes
     protected $routes = [];
 
     // add adds a route given a method, uri and controller
