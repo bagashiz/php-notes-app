@@ -3,8 +3,8 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE notes (
@@ -15,11 +15,11 @@ CREATE TABLE notes (
 );
 
 -- populate the tables
-INSERT INTO users (name, email)
+INSERT INTO users (email, password)
 VALUES
-	('John', 'john@email.com'),
-	('Jane', 'jane@email.com'),
-	('Jack', 'jack@email.com');
+	('john@email.com', 'password'),
+	('jane@email.com', 'password'),
+	('jack@email.com', 'password');
 
 INSERT INTO notes (body, user_id)
 VALUES

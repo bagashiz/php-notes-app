@@ -12,4 +12,10 @@ class Validator
 
         return strlen($value) >= $min && strlen($value) <= $max;
     }
+
+    // email validates the given email
+    public static function email($email)
+    {
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
 }
